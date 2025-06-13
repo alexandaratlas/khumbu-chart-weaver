@@ -26,7 +26,7 @@ export const BarChartComponent = ({ data }: BarChartComponentProps) => {
   }));
 
   return (
-    <div className="w-full h-96">
+    <div className="w-full h-[500px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={chartData}
@@ -34,16 +34,9 @@ export const BarChartComponent = ({ data }: BarChartComponentProps) => {
             top: 20,
             right: 30,
             left: 20,
-            bottom: 60,
+            bottom: 80,
           }}
         >
-          <defs>
-            <linearGradient id="nepalGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#1e40af" />
-              <stop offset="50%" stopColor="#dc2626" />
-              <stop offset="100%" stopColor="#a78bfa" />
-            </linearGradient>
-          </defs>
           <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
           <XAxis 
             dataKey="name" 
@@ -64,8 +57,8 @@ export const BarChartComponent = ({ data }: BarChartComponentProps) => {
           />
           <Tooltip 
             contentStyle={{
-              backgroundColor: 'rgba(255, 255, 255, 0.95)',
-              border: '1px solid #1e40af',
+              backgroundColor: 'white',
+              border: '1px solid #e2e8f0',
               borderRadius: '8px',
               boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
             }}
@@ -73,7 +66,7 @@ export const BarChartComponent = ({ data }: BarChartComponentProps) => {
           <Legend />
           <Bar 
             dataKey="value" 
-            fill="url(#nepalGradient)"
+            fill="#3b82f6"
             radius={[4, 4, 0, 0]}
             className="hover:opacity-80 transition-opacity duration-200"
           />

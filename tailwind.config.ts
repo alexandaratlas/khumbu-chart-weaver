@@ -62,14 +62,6 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				},
-				nepal: {
-					blue: '#1e40af',
-					crimson: '#dc2626',
-					forest: '#059669',
-					mountain: '#78716c',
-					earth: '#a78bfa',
-					slate: '#475569'
 				}
 			},
 			borderRadius: {

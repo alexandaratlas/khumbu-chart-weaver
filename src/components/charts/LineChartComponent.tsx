@@ -26,7 +26,7 @@ export const LineChartComponent = ({ data }: LineChartComponentProps) => {
   }));
 
   return (
-    <div className="w-full h-96">
+    <div className="w-full h-[500px]">
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           data={chartData}
@@ -34,7 +34,7 @@ export const LineChartComponent = ({ data }: LineChartComponentProps) => {
             top: 20,
             right: 30,
             left: 20,
-            bottom: 60,
+            bottom: 80,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
@@ -57,8 +57,8 @@ export const LineChartComponent = ({ data }: LineChartComponentProps) => {
           />
           <Tooltip 
             contentStyle={{
-              backgroundColor: 'rgba(255, 255, 255, 0.95)',
-              border: '1px solid #1e40af',
+              backgroundColor: 'white',
+              border: '1px solid #e2e8f0',
               borderRadius: '8px',
               boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
             }}
@@ -67,10 +67,10 @@ export const LineChartComponent = ({ data }: LineChartComponentProps) => {
           <Line 
             type="monotone" 
             dataKey="value" 
-            stroke="#1e40af"
+            stroke="#3b82f6"
             strokeWidth={3}
-            dot={{ fill: '#dc2626', strokeWidth: 2, r: 6 }}
-            activeDot={{ r: 8, fill: '#a78bfa', stroke: '#1e40af' }}
+            dot={{ fill: '#ef4444', strokeWidth: 2, r: 6 }}
+            activeDot={{ r: 8, fill: '#10b981', stroke: '#3b82f6' }}
             className="drop-shadow-sm"
           />
         </LineChart>

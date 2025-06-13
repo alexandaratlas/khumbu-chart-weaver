@@ -17,20 +17,20 @@ interface PieChartComponentProps {
   data: ChartData;
 }
 
-// Classy Nepal-inspired colors without yellow
+// Standard UI colors
 const COLORS = [
-  '#1e40af', // Nepal Blue
-  '#dc2626', // Nepal Crimson
-  '#059669', // Nepal Forest
-  '#a78bfa', // Nepal Earth
-  '#78716c', // Nepal Mountain
-  '#475569', // Nepal Slate
-  '#4338ca', // Indigo
-  '#be185d', // Pink
-  '#047857', // Emerald
-  '#7c3aed', // Violet
-  '#1f2937', // Gray
-  '#b91c1c', // Red
+  '#3b82f6', // Blue
+  '#ef4444', // Red
+  '#10b981', // Green
+  '#f59e0b', // Amber
+  '#8b5cf6', // Purple
+  '#06b6d4', // Cyan
+  '#f97316', // Orange
+  '#84cc16', // Lime
+  '#ec4899', // Pink
+  '#6b7280', // Gray
+  '#14b8a6', // Teal
+  '#a855f7', // Violet
 ];
 
 export const PieChartComponent = ({ data }: PieChartComponentProps) => {
@@ -61,7 +61,7 @@ export const PieChartComponent = ({ data }: PieChartComponentProps) => {
   };
 
   return (
-    <div className="w-full h-96">
+    <div className="w-full h-[500px]">
       <ResponsiveContainer width="100%" height="100%">
         <PieChart>
           <Pie
@@ -70,7 +70,7 @@ export const PieChartComponent = ({ data }: PieChartComponentProps) => {
             cy="50%"
             labelLine={false}
             label={renderCustomizedLabel}
-            outerRadius={120}
+            outerRadius={150}
             fill="#8884d8"
             dataKey="value"
             stroke="#fff"
@@ -86,8 +86,8 @@ export const PieChartComponent = ({ data }: PieChartComponentProps) => {
           </Pie>
           <Tooltip 
             contentStyle={{
-              backgroundColor: 'rgba(255, 255, 255, 0.95)',
-              border: '1px solid #1e40af',
+              backgroundColor: 'white',
+              border: '1px solid #e2e8f0',
               borderRadius: '8px',
               boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
             }}
