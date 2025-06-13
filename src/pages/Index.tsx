@@ -1,13 +1,13 @@
+import { BarChart3, PieChart, TrendingUp } from "lucide-react";
 
 import { Card } from "@/components/ui/card";
 import { ChartList } from "@/components/ChartList";
-import { TrendingUp, PieChart, BarChart3 } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-primary text-primary-foreground shadow-lg">
+      <header className="bg-white text-primary-foreground shadow-lg">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
@@ -34,7 +34,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-12">
+      <section className="container mx-auto px-4 py-12 bg-gray-100">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-foreground mb-4">
             Interactive Data Visualization
@@ -89,7 +89,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-muted text-muted-foreground py-8 mt-16">
+      <footer className="bg-gray-100 text-muted-foreground py-8 mt-16">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <TrendingUp className="h-6 w-6 text-primary" />

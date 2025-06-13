@@ -1,5 +1,6 @@
-import * as React from "react"
 import * as MenubarPrimitive from "@radix-ui/react-menubar"
+import * as React from "react"
+
 import { Check, ChevronRight, Circle } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -21,7 +22,7 @@ const Menubar = React.forwardRef<
   <MenubarPrimitive.Root
     ref={ref}
     className={cn(
-      "flex h-10 items-center space-x-1 rounded-md border bg-background p-1",
+      "flex h-10 items-center space-x-1 rounded-md border bg-white p-1",
       className
     )}
     {...props}

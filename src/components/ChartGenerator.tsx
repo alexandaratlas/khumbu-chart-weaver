@@ -1,15 +1,15 @@
-
-import { useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { PieChartComponent } from "./charts/PieChartComponent";
+import { AlertCircle, Mountain, Upload } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 import { BarChartComponent } from "./charts/BarChartComponent";
+import { Button } from "@/components/ui/button";
 import { LineChartComponent } from "./charts/LineChartComponent";
-import { Upload, AlertCircle, Mountain } from "lucide-react";
+import { PieChartComponent } from "./charts/PieChartComponent";
+import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import { useState } from "react";
 
 interface ChartData {
   type: 'pie' | 'bar' | 'line';
@@ -109,8 +109,8 @@ export const ChartGenerator = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
       {/* Input Section */}
-      <Card className="bg-card/80 backdrop-blur-sm border-nepal-gold/20 shadow-xl">
-        <CardHeader className="bg-gradient-to-r from-nepal-blue/10 to-nepal-gold/10">
+      <Card className="bg-card/80 backdrop-blur-sm border-slate-100 shadow-xl">
+        <CardHeader className="bg-gradient-to-r from-nepal-blue/10 to-slate-100/10">
           <CardTitle className="flex items-center space-x-2 text-nepal-blue">
             <Upload className="h-5 w-5" />
             <span>Chart Data Input</span>
@@ -127,7 +127,7 @@ export const ChartGenerator = () => {
                 onChange={(e) => setJsonInput(e.target.value)}
                 placeholder="Paste your chart JSON data here..."
                 rows={12}
-                className="font-mono text-sm border-nepal-blue/20 focus:border-nepal-gold"
+                className="font-mono text-sm border-nepal-blue/20 focus:border-slate-100"
               />
             </div>
 
@@ -157,7 +157,7 @@ export const ChartGenerator = () => {
                   variant="outline"
                   size="sm"
                   onClick={() => loadSampleData('pie')}
-                  className="border-nepal-gold text-nepal-blue hover:bg-nepal-gold/10"
+                  className="border-slate-100 text-nepal-blue hover:bg-slate-100/10"
                 >
                   Pie Chart
                 </Button>
@@ -184,8 +184,8 @@ export const ChartGenerator = () => {
       </Card>
 
       {/* Chart Display Section */}
-      <Card className="bg-card/80 backdrop-blur-sm border-nepal-blue/20 shadow-xl">
-        <CardHeader className="bg-gradient-to-r from-nepal-gold/10 to-nepal-blue/10">
+      <Card className="bg-gray-100 border-nepal-blue/20 shadow-xl">
+        <CardHeader className="bg-gradient-to-r from-slate-100/10 to-nepal-blue/10">
           <CardTitle className="text-nepal-blue">Chart Preview</CardTitle>
         </CardHeader>
         <CardContent className="p-6">
@@ -205,7 +205,7 @@ export const ChartGenerator = () => {
             </div>
           ) : (
             <div className="flex flex-col items-center justify-center h-64 text-center">
-              <Mountain className="h-16 w-16 text-nepal-gold/50 mb-4" />
+              <Mountain className="h-16 w-16 text-slate-400 mb-4" />
               <h3 className="text-lg font-medium text-nepal-blue mb-2">
                 Ready to Visualize Your Data
               </h3>

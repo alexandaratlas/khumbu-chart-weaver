@@ -1,5 +1,4 @@
-
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
+import { Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
 
 interface ChartData {
   type: 'pie' | 'bar' | 'line';
@@ -22,7 +21,7 @@ const COLORS = [
   '#3b82f6', // Blue
   '#ef4444', // Red
   '#10b981', // Green
-  '#f59e0b', // Amber
+  '#f1f5f9', // Creamy Grey (replaces Amber)
   '#8b5cf6', // Purple
   '#06b6d4', // Cyan
   '#f97316', // Orange
