@@ -34,13 +34,26 @@ export const useChartData = () => {
         throw error
       }
 
+      if (!data || data.length === 0) {
+        console.log('No data found in database')
+        return []
+      }
+
       const parsedData = data?.map(item => {
         try {
-          const parsed = JSON.parse(item.json_input_from_ai)
-          console.log('Parsed chart data:', parsed)
-          return parsed
+          // Check if json_input_from_ai is already an object or a string
+          let chartData;
+          if (typeof item.json_input_from_ai === 'string') {
+            chartData = JSON.parse(item.json_input_from_ai)
+          } else {
+            // It's already an object
+            chartData = item.json_input_from_ai
+          }
+          
+          console.log('Chart data item:', chartData)
+          return chartData
         } catch (e) {
-          console.error('Error parsing JSON:', e, 'Raw data:', item.json_input_from_ai)
+          console.error('Error processing data:', e, 'Raw data:', item.json_input_from_ai)
           return null
         }
       }).filter(Boolean) || []
