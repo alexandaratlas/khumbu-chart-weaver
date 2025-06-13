@@ -64,12 +64,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				nepal: {
-					blue: '#003893',
-					crimson: '#DC143C',
-					gold: '#FFD700',
-					mountain: '#8B7355',
-					earth: '#D2B48C',
-					forest: '#228B22'
+					blue: '#1e40af',
+					crimson: '#dc2626',
+					forest: '#059669',
+					mountain: '#78716c',
+					earth: '#a78bfa',
+					slate: '#475569'
 				}
 			},
 			borderRadius: {

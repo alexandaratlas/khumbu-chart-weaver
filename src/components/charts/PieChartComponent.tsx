@@ -17,20 +17,20 @@ interface PieChartComponentProps {
   data: ChartData;
 }
 
-// Nepal-inspired colors
+// Classy Nepal-inspired colors without yellow
 const COLORS = [
-  '#003893', // Nepal Blue
-  '#DC143C', // Nepal Crimson
-  '#FFD700', // Nepal Gold
-  '#228B22', // Forest Green
-  '#8B7355', // Mountain Brown
-  '#D2B48C', // Earth Tan
-  '#4169E1', // Royal Blue
-  '#FF6347', // Tomato Red
-  '#32CD32', // Lime Green
-  '#DAA520', // Goldenrod
-  '#8A2BE2', // Blue Violet
-  '#FF69B4', // Hot Pink
+  '#1e40af', // Nepal Blue
+  '#dc2626', // Nepal Crimson
+  '#059669', // Nepal Forest
+  '#a78bfa', // Nepal Earth
+  '#78716c', // Nepal Mountain
+  '#475569', // Nepal Slate
+  '#4338ca', // Indigo
+  '#be185d', // Pink
+  '#047857', // Emerald
+  '#7c3aed', // Violet
+  '#1f2937', // Gray
+  '#b91c1c', // Red
 ];
 
 export const PieChartComponent = ({ data }: PieChartComponentProps) => {
@@ -87,7 +87,7 @@ export const PieChartComponent = ({ data }: PieChartComponentProps) => {
           <Tooltip 
             contentStyle={{
               backgroundColor: 'rgba(255, 255, 255, 0.95)',
-              border: '1px solid #003893',
+              border: '1px solid #1e40af',
               borderRadius: '8px',
               boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
             }}

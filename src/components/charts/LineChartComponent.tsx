@@ -58,7 +58,7 @@ export const LineChartComponent = ({ data }: LineChartComponentProps) => {
           <Tooltip 
             contentStyle={{
               backgroundColor: 'rgba(255, 255, 255, 0.95)',
-              border: '1px solid #003893',
+              border: '1px solid #1e40af',
               borderRadius: '8px',
               boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
             }}
@@ -67,10 +67,10 @@ export const LineChartComponent = ({ data }: LineChartComponentProps) => {
           <Line 
             type="monotone" 
             dataKey="value" 
-            stroke="#003893"
+            stroke="#1e40af"
             strokeWidth={3}
-            dot={{ fill: '#DC143C', strokeWidth: 2, r: 6 }}
-            activeDot={{ r: 8, fill: '#FFD700', stroke: '#003893' }}
+            dot={{ fill: '#dc2626', strokeWidth: 2, r: 6 }}
+            activeDot={{ r: 8, fill: '#a78bfa', stroke: '#1e40af' }}
             className="drop-shadow-sm"
           />
         </LineChart>

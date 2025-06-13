@@ -1,7 +1,6 @@
 
-import { useState } from "react";
 import { Card } from "@/components/ui/card";
-import { ChartGenerator } from "@/components/ChartGenerator";
+import { ChartList } from "@/components/ChartList";
 import { Mountain, TrendingUp, PieChart, BarChart3 } from "lucide-react";
 
 const Index = () => {
@@ -12,8 +11,8 @@ const Index = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="bg-nepal-gold p-2 rounded-lg shadow-md">
-                <Mountain className="h-8 w-8 text-nepal-blue" />
+              <div className="bg-nepal-forest p-2 rounded-lg shadow-md">
+                <Mountain className="h-8 w-8 text-white" />
               </div>
               <div>
                 <h1 className="text-3xl font-bold">AI Accountant</h1>
@@ -49,10 +48,10 @@ const Index = () => {
 
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Card className="p-6 bg-gradient-to-br from-nepal-gold/10 to-nepal-gold/20 border-nepal-gold/30 hover:shadow-lg transition-all duration-300 animate-float">
+          <Card className="p-6 bg-gradient-to-br from-nepal-forest/20 to-nepal-forest/10 border-nepal-forest/30 hover:shadow-lg transition-all duration-300 animate-float">
             <div className="flex items-center space-x-3">
-              <div className="bg-nepal-gold p-2 rounded-full">
-                <PieChart className="h-6 w-6 text-nepal-blue" />
+              <div className="bg-nepal-forest p-2 rounded-full">
+                <PieChart className="h-6 w-6 text-white" />
               </div>
               <div>
                 <h3 className="font-semibold text-nepal-blue">Pie Charts</h3>
@@ -61,7 +60,7 @@ const Index = () => {
             </div>
           </Card>
 
-          <Card className="p-6 bg-gradient-to-br from-nepal-blue/10 to-nepal-blue/20 border-nepal-blue/30 hover:shadow-lg transition-all duration-300 animate-float" style={{ animationDelay: '0.5s' }}>
+          <Card className="p-6 bg-gradient-to-br from-nepal-blue/20 to-nepal-blue/10 border-nepal-blue/30 hover:shadow-lg transition-all duration-300 animate-float" style={{ animationDelay: '0.5s' }}>
             <div className="flex items-center space-x-3">
               <div className="bg-nepal-blue p-2 rounded-full">
                 <BarChart3 className="h-6 w-6 text-white" />
@@ -73,9 +72,9 @@ const Index = () => {
             </div>
           </Card>
 
-          <Card className="p-6 bg-gradient-to-br from-nepal-crimson/10 to-nepal-crimson/20 border-nepal-crimson/30 hover:shadow-lg transition-all duration-300 animate-float" style={{ animationDelay: '1s' }}>
+          <Card className="p-6 bg-gradient-to-br from-nepal-earth/20 to-nepal-earth/10 border-nepal-earth/30 hover:shadow-lg transition-all duration-300 animate-float" style={{ animationDelay: '1s' }}>
             <div className="flex items-center space-x-3">
-              <div className="bg-nepal-crimson p-2 rounded-full">
+              <div className="bg-nepal-earth p-2 rounded-full">
                 <TrendingUp className="h-6 w-6 text-white" />
               </div>
               <div>
@@ -86,16 +85,16 @@ const Index = () => {
           </Card>
         </div>
 
-        {/* Main Chart Generator */}
-        <ChartGenerator />
+        {/* Main Chart Display */}
+        <ChartList />
       </section>
 
       {/* Footer */}
       <footer className="bg-nepal-blue text-white py-8 mt-16">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <Mountain className="h-6 w-6 text-nepal-gold" />
-            <span className="text-nepal-gold font-semibold">AI Accountant</span>
+            <Mountain className="h-6 w-6 text-nepal-forest" />
+            <span className="text-nepal-forest font-semibold">AI Accountant</span>
           </div>
           <p className="text-blue-200">
             Bringing the beauty of Nepal to your data visualization experience

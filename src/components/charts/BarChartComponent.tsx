@@ -58,7 +58,7 @@ export const BarChartComponent = ({ data }: BarChartComponentProps) => {
           <Tooltip 
             contentStyle={{
               backgroundColor: 'rgba(255, 255, 255, 0.95)',
-              border: '1px solid #003893',
+              border: '1px solid #1e40af',
               borderRadius: '8px',
               boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
             }}
@@ -72,9 +72,9 @@ export const BarChartComponent = ({ data }: BarChartComponentProps) => {
           />
           <defs>
             <linearGradient id="nepalGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#003893" />
-              <stop offset="50%" stopColor="#DC143C" />
-              <stop offset="100%" stopColor="#FFD700" />
+              <stop offset="0%" stopColor="#1e40af" />
+              <stop offset="50%" stopColor="#dc2626" />
+              <stop offset="100%" stopColor="#a78bfa" />
             </linearGradient>
           </defs>
         </BarChart>
