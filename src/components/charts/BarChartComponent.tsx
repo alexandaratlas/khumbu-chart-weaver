@@ -37,6 +37,13 @@ export const BarChartComponent = ({ data }: BarChartComponentProps) => {
             bottom: 60,
           }}
         >
+          <defs>
+            <linearGradient id="nepalGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#1e40af" />
+              <stop offset="50%" stopColor="#dc2626" />
+              <stop offset="100%" stopColor="#a78bfa" />
+            </linearGradient>
+          </defs>
           <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
           <XAxis 
             dataKey="name" 
@@ -70,13 +77,6 @@ export const BarChartComponent = ({ data }: BarChartComponentProps) => {
             radius={[4, 4, 0, 0]}
             className="hover:opacity-80 transition-opacity duration-200"
           />
-          <defs>
-            <linearGradient id="nepalGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#1e40af" />
-              <stop offset="50%" stopColor="#dc2626" />
-              <stop offset="100%" stopColor="#a78bfa" />
-            </linearGradient>
-          </defs>
         </BarChart>
       </ResponsiveContainer>
     </div>
